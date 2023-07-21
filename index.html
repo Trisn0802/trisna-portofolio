@@ -15,7 +15,7 @@
   <meta property="og:image:width" content="300">
   <meta property="og:image:height" content="300">
 
-  <meta property="og:url" content="https://d3904e74.trisna-info.pages.dev">
+  <meta property="og:url" content="https://trisna-info.pages.dev">
   <!-- Thumbnail Preview End -->
 
   <meta charset="utf-8">
@@ -111,10 +111,10 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
+          <div class="col-lg-4" data-aos="fade-right" data-aos-duration="500" data-aos-offset="300">
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-offset="300">
             <center>
             <h3>Junior Software Engineering</h3>
           </center>
@@ -135,17 +135,28 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> 
                     <span id="umur">
                   </span></li>
-                  <script type="text/javascript">
-                    // Tahun lahir Anda
-                    var tahunLahir = 2004;
-
-                    // Tahun saat ini
-                    var tahunSaatIni = new Date().getFullYear();
-
+                  <script>
+                    // Tanggal lahir Anda (format: "YYYY-MM-DD")
+                    var tanggalLahir = "2004-02-08";
+              
+                    // Mendapatkan tanggal lahir dari string tanggalLahir
+                    var tanggalLahirObj = new Date(tanggalLahir);
+              
+                    // Tanggal saat ini
+                    var tanggalSaatIni = new Date();
+              
                     // Menghitung umur
-                    var umur = tahunSaatIni - tahunLahir;
-
-                    // Menampilkan umur
+                    var umur = tanggalSaatIni.getFullYear() - tanggalLahirObj.getFullYear();
+              
+                    // Periksa apakah sudah ulang tahun
+                    var bulanSaatIni = tanggalSaatIni.getMonth();
+                    var tanggalSaatLahir = tanggalLahirObj.getDate();
+              
+                    if (bulanSaatIni < tanggalLahirObj.getMonth() || (bulanSaatIni === tanggalLahirObj.getMonth() && tanggalSaatIni.getDate() < tanggalSaatLahir)) {
+                      umur--;
+                    }
+              
+                    // Menampilkan umur dengan format
                     var umurElemen = document.getElementById("umur");
                     umurElemen.textContent = umur;
                   </script>
@@ -253,7 +264,7 @@
 
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6" data-aos="fade-up">
 
             <div class="progress">
               <span class="skill">PHP <i class="val">60%</i></span>
