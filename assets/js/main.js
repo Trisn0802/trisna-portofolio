@@ -263,7 +263,7 @@
       duration: 1000,
       easing: "ease-in-out",
       once: false,
-      mirror: true,
+      mirror: false,
     });
   });
 
