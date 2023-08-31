@@ -70,6 +70,7 @@ h6 {
   z-index: 9999;
   overflow: hidden;
   background: #fff;
+  /* margin: 0 auto; */
 }
 
 #preloader:before {
@@ -84,6 +85,7 @@ h6 {
   width: 60px;
   height: 60px;
   animation: animate-preloader 1s linear infinite;
+  /* margin: 0 auto;  */
 }
 
 @keyframes animate-preloader {

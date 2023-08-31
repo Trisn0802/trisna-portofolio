@@ -99,7 +99,8 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="zoom-in-right">
+
+    <div class="hero-container" data-aos="zoom-out-right">
       <h1>Trisna Almuti</h1>
       <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
         <p>I'm <span class="typed" data-typed-items="Junior Programmer"></span></p>
@@ -109,14 +110,66 @@
 
   <main id="main">
 
+    <!-- Translate Button -->
+    <!-- <link rel="stylesheet" href="assets/css/dropdown.css">
+    <div class="custom-select">
+      <span class="selected-option">
+        <span class="selected-flag"></span>
+        Language
+      </span>
+      <ul class="options" id="language-list">
+        <li data-lang="id"><span class="flag flag-id"><img src="assets/img/indonesia.png" alt="Indonesia"></span>Indonesia</li>
+        <li data-lang="en"><span class="flag flag-en"><img src="assets/img/united-states.png" alt="English"></span>English</li>
+        <li data-lang="jp"><span class="flag flag-jp"><img src="flag-jp.png" alt="Japanese"></span>Japanese</li>
+      </ul>
+    </div>      
+
+    <script>
+      const select = document.querySelector('.custom-select');
+      const selectedOption = select.querySelector('.selected-option');
+      const optionsList = select.querySelector('.options');
+
+      const selectedLanguage = localStorage.getItem('selectedLanguage'); // Retrieve selected language from localStorage
+      if (selectedLanguage) {
+        changeLanguage(selectedLanguage); // Apply the selected language if it's present in localStorage
+      }
+
+      selectedOption.addEventListener('click', () => {
+        optionsList.classList.toggle('active');
+      });
+
+      optionsList.addEventListener('click', (e) => {
+        if (e.target.tagName === 'LI') {
+          selectedOption.textContent = e.target.textContent;
+          optionsList.classList.remove('active');
+        }
+      });
+
+      function changeLanguage(lang) {
+        const selectedFlag = document.querySelector('.flag-' + lang);
+        const selectedFlagClone = selectedFlag.querySelector('.flag').cloneNode(); // Clone the flag
+        const languageText = selectedFlag.textContent;
+
+        selectedOption.innerHTML = '';
+        selectedOption.appendChild(selectedFlagClone);
+        selectedOption.appendChild(document.createTextNode(' ' + languageText));
+
+        optionsList.classList.remove('active');
+      }
+
+    </script> -->
+    <!-- Translate Button End -->
+
+    <!-- <br> -->
+
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
 
         <div class="section-title">
           <center>
-          <h2>About</h2></center>
-          <p>
+          <h2 id="headingAbout">About</h2></center>
+          <p id="contentAbout">
             Greetings! I'm delighted to introduce myself as Trisna Almuti, a recent Software Engineering graduate with an unwavering passion for web development. My fascination with this field began in 2020, and ever since, I have embraced an insatiable thirst for knowledge. I embarked on my journey by delving into the fundamental aspects of website creation, starting with the essentials of HTML and CSS. The deeper I delved into this realm, the more my passion burgeoned, leading me to focus primarily on the captivating realm of backend development.
           </p>
         </div>
@@ -136,7 +189,7 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>08 Febuary 2004</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong id="birthday">Birthday:</strong> <span>08 Febuary 2004</span></li>
                   <!-- <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+62 895 7118 56677</span></li> -->
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>West Jakarta, Indonesia</span></li>
                 </ul>
@@ -392,6 +445,7 @@
               <p><em>Universitas BSI</em></p>
               <p>Currently, I am completing the Informatics Engineering Study Program at the University Of Bina Sarana Informatika, which has a comprehensive curriculum with a focus on software development, web programming, and artificial intelligence. This study program also emphasizes the application of the latest technology, such as big data and cloud computing.</p>
             </div>
+            
             <div class="resume-item">
               <h4>STATE VOCATIONAL HIGH SCHOOL 1 JAKARTA</h4>
               <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">Software Engineering Major</h5>
@@ -399,7 +453,19 @@
               <p><em>SMK Negeri 1 Jakarta</em></p>
               <p>My vocational high school education provided me with a solid foundation in understanding software development and technical skills useful in my current web development career. I continue to deepen my knowledge and skills in software engineering through a growing education and work experience.</p>
             </div>
+
+            <h3 class="resume-title">Achievement</h3>
+            <div class="resume-item">
+              <h4>SOFTWARE ENGINEERING CERTIFICATION EXAM</h4>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">April 2023</h5>
+              <p><em>DKI Jakarta, Center Jakarta</em></p>
+              <ul>
+                <li>Declared competent in carrying out the software engineering certification exam with several sections, namely basic programming and object-oriented programming using the Java programming language, then creating a website using the PHP programming language.</li>
+              </ul>
+            </div>
           </div>
+
+          
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Experience</h3>
             <div class="resume-item">
@@ -420,14 +486,6 @@
                 <li>Create documents and perform System Integration Testing (SIT) and User Acceptance Testing (UAT).</li>
                 <li>Software implementation to related users.</li>
                 <li>Use SQL queries to check data flow, data anomalies, and database structures for application error analysis report needs.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>SOFTWARE ENGINEERING CERTIFICATION EXAM</h4>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">April 2023</h5>
-              <p><em>DKI Jakarta, Center Jakarta</em></p>
-              <ul>
-                <li>Declared competent in carrying out the software engineering certification exam with several sections, namely basic programming and object-oriented programming using the Java programming language, then creating a website using the PHP programming language.</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -967,6 +1025,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Translate JS -->
+  <script src="assets/js/language.js"></script>
 
   <!-- Intergram Chat Via Telegram Bot -->
   <!-- <script>

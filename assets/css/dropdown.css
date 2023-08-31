@@ -1,0 +1,60 @@
+.custom-select {
+  position: relative;
+  width: 200px;
+  margin: 10px;
+}
+
+.selected-option {
+  display: block;
+  padding: 10px;
+  border: 1px solid #eeff00;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #050d18;
+  color: white;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  list-style: none;
+  margin-top: 5px;
+  margin-left: 10px;
+  /* margin-bottom: 20px; */
+  padding: 4px;
+  border: 1px solid #ffee00;
+  cursor: pointer;
+  background-color: #050d18;
+  color: white;
+  transition: 0.3s ease-in-out;
+  /* vertical-align: middle; */
+}
+
+/* :hover .options {
+  background-color: green;
+} */
+
+.options.active {
+  display: block;
+}
+
+.flag {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-size: cover;
+  margin-right: 5px;
+  margin-top: 4px;
+}
+
+/* .flag-id {
+  background-image: url("../img/indonesia.png");
+}
+
+.flag-en {
+  background-image: url("../img/united-states.png");
+}
+
+.flag-jp {
+  background-image: url("../img/japan.png");
+}  */
