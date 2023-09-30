@@ -41,7 +41,108 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet"
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .download-btn-2 {
+      width: 100%;
+      padding: 10px;
+      background-color: #1b2838;
+      color: white;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s ease-in-out all;
+    }
+
+    .download-btn-2:hover {
+      background-color: #000000;
+      color: black;
+    }
+
+    /* .download-btn-2 {
+      
+    } */
+  </style>
+
+  <style>
+    .download-btn {
+      margin-top: -30px;
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #1b2838;
+      color: white;
+      border-radius: 15px;
+      transition: 0.3s ease-in-out all;
+    }
+
+    .download-btn:hover {
+      background-color: #5900ff;
+      color: white;
+    }
+
+    .download-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+    <style>
+      /* Apply styles to the custom horizontal line */
+      .rainbow-line {
+        height: 5px; /* Set the height of the line */
+        background-image: linear-gradient(45deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000); /* Set the gradient for the rainbow effect */
+        background-size: 7000% 100%; /* Set a larger size of the gradient */
+        border-radius: 10px; /* Add rounded corners */
+        animation: rainbow 8s linear infinite; /* Apply the rainbow animation */
+      }
+
+      /* Define the animation */
+      @keyframes rainbow {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+      }
+  </style>
+
+  <style>
+    .label-connect {
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      /* margin-bottom: 10px; */
+    }
+
+    .link-connect {
+      background-color: #5900ff;
+      padding: 7px 15px;
+      color: white;
+      text-decoration: none;
+      /* border: 1px black solid; */
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+      margin-left: auto; /* This pushes the link to the end of the line */
+    }
+
+    .link-connect:hover {
+      background-image: linear-gradient(45deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000);
+      /* border: none;  */
+      background-size: 7000% 100%; 
+      border-radius: 15px; 
+      animation: rainbowlink 8s linear infinite; 
+      color: white;
+    }
+
+    /* Define the animation */
+    @keyframes rainbowlink {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+  </style>
 </head>
 
 <body>
@@ -63,22 +164,6 @@
           <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
           <a href="https://www.linkedin.com/in/trisna-almuti-aa2437280" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
           <a href="https://github.com/Trisn0802" class="github" target="_blank"><i class="bx bxl-github"></i></a> -->
-          <style>
-              /* Apply styles to the custom horizontal line */
-              .rainbow-line {
-                height: 5px; /* Set the height of the line */
-                background-image: linear-gradient(45deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000); /* Set the gradient for the rainbow effect */
-                background-size: 7000% 100%; /* Set a larger size of the gradient */
-                border-radius: 10px; /* Add rounded corners */
-                animation: rainbow 8s linear infinite; /* Apply the rainbow animation */
-              }
-
-              /* Define the animation */
-              @keyframes rainbow {
-                0% { background-position: 0% 50%; }
-                100% { background-position: 100% 50%; }
-              }
-          </style>
           <div class="rainbow-line"></div>
         </div>
       </div>
@@ -94,29 +179,6 @@
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
         <a class="download-btn-2" href="assets/cv/Trisna Almuti CV.pdf" download="Trisna Almuti CV.pdf" target="_blank">Download CV</a>
-          <style>
-            .download-btn-2 {
-              width: 100%;
-              padding: 10px;
-              background-color: #1b2838;
-              color: white;
-              border-radius: 15px;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-              transition: 0.3s ease-in-out all;
-            }
-
-            .download-btn-2:hover {
-              background-color: #000000;
-              color: black;
-            }
-
-            /* .download-btn-2 {
-              
-            } */
-          </style>
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
@@ -191,30 +253,7 @@
       <div class="container">
 
         <div class="section-title">
-          <style>
-            .download-btn {
-              margin-top: -30px;
-              margin-bottom: 20px;
-              width: 100%;
-              padding: 10px;
-              background-color: #1b2838;
-              color: white;
-              border-radius: 15px;
-              transition: 0.3s ease-in-out all;
-            }
-
-            .download-btn:hover {
-              background-color: #5900ff;
-              color: white;
-            }
-
-            .download-btn {
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-            }
-          </style>
+          
           <a class="download-btn" href="assets/cv/Trisna Almuti CV.pdf" download="Trisna Almuti CV.pdf" target="_blank">Download CV</a>
           <center>
           <h2 id="headingAbout">About</h2></center>
@@ -248,31 +287,6 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> 
                     <span id="umur">
                   </span></li>
-                  <script>
-                    // Tanggal lahir Anda (format: "YYYY-MM-DD")
-                    var tanggalLahir = "2004-02-08";
-              
-                    // Mendapatkan tanggal lahir dari string tanggalLahir
-                    var tanggalLahirObj = new Date(tanggalLahir);
-              
-                    // Tanggal saat ini
-                    var tanggalSaatIni = new Date();
-              
-                    // Menghitung umur
-                    var umur = tanggalSaatIni.getFullYear() - tanggalLahirObj.getFullYear();
-              
-                    // Periksa apakah sudah ulang tahun
-                    var bulanSaatIni = tanggalSaatIni.getMonth();
-                    var tanggalSaatLahir = tanggalLahirObj.getDate();
-              
-                    if (bulanSaatIni < tanggalLahirObj.getMonth() || (bulanSaatIni === tanggalLahirObj.getMonth() && tanggalSaatIni.getDate() < tanggalSaatLahir)) {
-                      umur--;
-                    }
-              
-                    // Menampilkan umur dengan format
-                    var umurElemen = document.getElementById("umur");
-                    umurElemen.textContent = umur;
-                  </script>
                   <!-- <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>trisnakun20@gmail.com</span></li> -->
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
@@ -691,7 +705,7 @@
                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
-            </div>
+            </div> testgglkksdfgsdhgbdfb ubasuhbdfibkdjnjbdsinndsbhsodnvuoasoasnvsd
           </div> -->
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -908,40 +922,6 @@
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <p style="text-align: center; padding: 6px; background-color: #5900ff; color: white; border-radius: 10px;">More Connection With Me 🤝</p>
-                <style>
-                  .label-connect {
-                    font-size: 24px;
-                    display: flex;
-                    align-items: center;
-                    /* margin-bottom: 10px; */
-                  }
-
-                  .link-connect {
-                    background-color: #5900ff;
-                    padding: 7px 15px;
-                    color: white;
-                    text-decoration: none;
-                    /* border: 1px black solid; */
-                    border-radius: 15px;
-                    transition: all 0.3s ease-in-out;
-                    margin-left: auto; /* This pushes the link to the end of the line */
-                  }
-
-                  .link-connect:hover {
-                    background-image: linear-gradient(45deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000);
-                    /* border: none;  */
-                    background-size: 7000% 100%; 
-                    border-radius: 15px; 
-                    animation: rainbowlink 8s linear infinite; 
-                    color: white;
-                  }
-
-                  /* Define the animation */
-                  @keyframes rainbowlink {
-                    0% { background-position: 0% 50%; }
-                    100% { background-position: 100% 50%; }
-                  }
-                </style>
               <div class="row">
                 <div class="form-group">
                   <label class="label-connect" for="name">
@@ -1054,6 +1034,33 @@
       </div>
     </div>
   </footer><!-- End  Footer -->
+
+  <!-- Umur -->
+  <script>
+    // Tanggal lahir Anda (format: "YYYY-MM-DD")
+    var tanggalLahir = "2004-02-08";
+
+    // Mendapatkan tanggal lahir dari string tanggalLahir
+    var tanggalLahirObj = new Date(tanggalLahir);
+
+    // Tanggal saat ini
+    var tanggalSaatIni = new Date();
+
+    // Menghitung umur
+    var umur = tanggalSaatIni.getFullYear() - tanggalLahirObj.getFullYear();
+
+    // Periksa apakah sudah ulang tahun
+    var bulanSaatIni = tanggalSaatIni.getMonth();
+    var tanggalSaatLahir = tanggalLahirObj.getDate();
+
+    if (bulanSaatIni < tanggalLahirObj.getMonth() || (bulanSaatIni === tanggalLahirObj.getMonth() && tanggalSaatIni.getDate() < tanggalSaatLahir)) {
+      umur--;
+    }
+
+    // Menampilkan umur dengan format
+    var umurElemen = document.getElementById("umur");
+    umurElemen.textContent = umur;
+  </script>
 
   <!-- Preloader -->
   <div id="preloader"></div>
