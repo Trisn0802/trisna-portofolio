@@ -180,6 +180,23 @@
 
       let portfolioFilters = select("#portfolio-flters li", true);
 
+      // SET DEFAULT FILTER TO '*'
+      portfolioFilters.forEach(function (el) {
+        el.classList.remove("filter-active");
+      });
+      // Pilih filter pertama (All)
+      if (portfolioFilters.length > 0) {
+        portfolioFilters[0].classList.add("filter-active");
+        portfolioIsotope.arrange({ filter: "*" });
+      }
+      // Inisialisasi lightbox sesuai default
+      portfolioIsotope.on("arrangeComplete", function () {
+        AOS.refresh();
+        initPortfolioLightbox();
+      });
+      // Panggil lightbox pertama kali
+      initPortfolioLightbox();
+
       on(
         "click",
         "#portfolio-flters li",
@@ -193,21 +210,44 @@
           portfolioIsotope.arrange({
             filter: this.getAttribute("data-filter"),
           });
-          portfolioIsotope.on("arrangeComplete", function () {
-            AOS.refresh();
-          });
+          // Lightbox akan diinisialisasi ulang di arrangeComplete
         },
         true
       );
     }
   });
 
-  /**
-   * Initiate portfolio lightbox
-   */
-  const portfolioLightbox = GLightbox({
-    selector: ".portfolio-lightbox",
-  });
+  let portfolioLightbox = null;
+
+  function initPortfolioLightbox() {
+    if (portfolioLightbox) {
+      portfolioLightbox.destroy();
+    }
+    // Tentukan filter aktif
+    let activeFilter = document.querySelector('#portfolio-flters .filter-active');
+    let selector = '';
+    if (activeFilter) {
+      const filter = activeFilter.getAttribute('data-filter');
+      if (filter === '*') {
+        selector = '.portfolio-item .portfolio-lightbox';
+      } else if (filter === '.filter-web') {
+        selector = '.portfolio-item.filter-web .portfolio-lightbox';
+      } else if (filter === '.filter-achievements') {
+        selector = '.portfolio-item.filter-achievements .portfolio-lightbox';
+      } else if (filter === '.filter-other') {
+        // Hanya item yang bukan web dan achievements
+        selector = '.portfolio-item.filter-other .portfolio-lightbox';
+      } else {
+        // fallback ke visible
+        selector = '.portfolio-item:not([style*="display: none"]) .portfolio-lightbox';
+      }
+    } else {
+      selector = '.portfolio-item:not([style*="display: none"]) .portfolio-lightbox';
+    }
+    portfolioLightbox = GLightbox({
+      selector: selector
+    });
+  }
 
   /**
    * Portfolio details slider
