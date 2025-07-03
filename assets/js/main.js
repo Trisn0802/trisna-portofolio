@@ -321,4 +321,42 @@
    * Initiate Pure Counter
    */
   new PureCounter();
+
+  function hidePortfolioLoaderWhenImagesLoaded(containerSelector, loaderSelector) {
+    const container = document.querySelector(containerSelector);
+    const loader = document.querySelector(loaderSelector);
+    if (!container || !loader) return;
+
+    const images = container.querySelectorAll('img');
+    let loaded = 0;
+    if (images.length === 0) {
+      loader.style.display = 'none';
+      return;
+    }
+    images.forEach(img => {
+      if (img.complete) {
+        loaded++;
+        if (loaded === images.length) loader.style.display = 'none';
+      } else {
+        img.addEventListener('load', () => {
+          loaded++;
+          if (loaded === images.length) loader.style.display = 'none';
+        });
+        img.addEventListener('error', () => {
+          loaded++;
+          if (loaded === images.length) loader.style.display = 'none';
+        });
+      }
+    });
+  }
+
+  // Untuk index.html (portofolio grid)
+  window.addEventListener('DOMContentLoaded', function() {
+    hidePortfolioLoaderWhenImagesLoaded('.portfolio-container', '#portfolio-loader');
+  });
+
+  // Untuk portfolio-details-siadu.html (misal slider)
+  window.addEventListener('DOMContentLoaded', function() {
+    hidePortfolioLoaderWhenImagesLoaded('.portfolio-details-slider', '#portfolio-loader');
+  });
 })();

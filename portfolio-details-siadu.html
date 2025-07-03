@@ -173,6 +173,30 @@
         }
       }
     </style>
+
+    <style>
+      .portfolio-loader {
+        position: absolute;
+        left: 0; top: 0; right: 0; bottom: 0;
+        background: rgba(255,255,255,0.8);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .spinner {
+        border: 6px solid #f3f3f3;
+        border-top: 6px solid #5900ff;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg);}
+        100% { transform: rotate(360deg);}
+      }
+    </style>
   </head>
 
   <body>
@@ -598,6 +622,10 @@
                         </p>
                       </div>
                     </center>
+
+                    <div id="portfolio-loader" class="portfolio-loader">
+                      <div class="spinner"></div>
+                    </div>
 
                     <div class="row" data-aos="fade-up">
                       <div class="col-lg-12 d-flex justify-content-center">
