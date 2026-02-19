@@ -178,6 +178,37 @@
     </style>
 
     <style>
+      :root {
+            --portfolio-bg: #cdedff;
+            --portfolio-border: #9cc7ff;
+            --portfolio-text: #033066;
+        }
+
+      .portfolio-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 999px;
+            background: var(--portfolio-bg);
+            border: 1px solid var(--portfolio-border);
+            color: var(--portfolio-text);
+            transition: transform 0.2s ease, background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+        }
+
+        .portfolio-link:hover {
+            color: var(--portfolio-text);
+            transform: translateY(-1px);
+        }
+
+        .portfolio-link svg {
+            width: 12px;
+            height: 12px;
+        }
+
       .portfolio-loader {
         position: absolute;
         left: 0; top: 0; right: 0; bottom: 0;
@@ -329,7 +360,15 @@
                   </li>
                   <!-- <li><strong>For</strong>: Bootcamp Project UBSI</li> -->
                   <li><strong>Project date</strong>: 26 June, 2025</li>
-                  <li><strong>Project URL</strong>: <button class="btn btn-primary btn-sm" onclick="window.open('https://siadu.trisnahome.my.id', '_blank')">siadu.trisnahome.my.id</button></li>
+                  <li>
+                    <strong>Project URL</strong>: <a class="portfolio-link" href="https://project.trisnahome.my.id/laravel/10/siadu/public/" target="_blank" rel="noopener noreferrer">
+                                        Go to website
+                                    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                                        <path d="M10.5 2a.5.5 0 0 0 0 1h1.793L7.146 8.146a.5.5 0 1 0 .708.708L13 3.707V5.5a.5.5 0 0 0 1 0V2.5a.5.5 0 0 0-.5-.5h-3z"/>
+                                        <path d="M3.5 3A1.5 1.5 0 0 0 2 4.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v4.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5H8a.5.5 0 0 0 0-1H3.5z"/>
+                                    </svg>
+                                </a>
+                              </li>
                 </ul>
               </div>
               <div class="portfolio-description">
