@@ -181,8 +181,11 @@
     (function(){var d=localStorage.getItem('darkMode');if(d==='true')document.body.classList.add('dark-mode');})();
   </script>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Header toggles: dark mode (always) + mobile nav (mobile only) ======= -->
+  <div class="header-toggle-group">
+    <i class="bi bi-list mobile-nav-toggle d-xl-none" aria-label="Toggle mobile menu"></i>
+    <i id="dark-mode-toggle" class="bi bi-moon-stars-fill" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Dark mode"></i>
+  </div>
 
   <!-- ======= Header ======= -->
   <header id="header">
@@ -213,12 +216,15 @@
           <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
+        <!-- <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Dark mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button> -->
         <a class="download-btn-2" href="assets/cv/Trisna Almuti CV.pdf" download="Trisna Almuti CV.pdf" target="_blank">Download CV</a>
       </nav><!-- .nav-menu -->
     </div>
-    <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Dark mode">
+    <!-- <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Dark mode">
       <i class="bi bi-moon-stars-fill"></i>
-    </button>
+    </button> -->
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->

@@ -26,27 +26,28 @@
     updateDarkModeIcon();
   }
   function updateDarkModeIcon() {
-    const btn = document.getElementById("dark-mode-toggle");
-    if (!btn) return;
-    const icon = btn.querySelector("i");
+    const bi = document.getElementById("dark-mode-toggle");
+    if (!bi) return;
+    // Element can be the <i> itself or a button containing <i>
+    const icon = bi.tagName === "I" ? bi : bi.querySelector("i");
     if (!icon) return;
     if (isDarkMode()) {
       icon.classList.remove("bi-moon-stars-fill");
       icon.classList.add("bi-sun-fill");
-      btn.setAttribute("title", "Light mode");
-      btn.setAttribute("aria-label", "Switch to light mode");
+      bi.setAttribute("title", "Light mode");
+      bi.setAttribute("aria-label", "Switch to light mode");
     } else {
       icon.classList.remove("bi-sun-fill");
       icon.classList.add("bi-moon-stars-fill");
-      btn.setAttribute("title", "Dark mode");
-      btn.setAttribute("aria-label", "Toggle dark mode");
+      bi.setAttribute("title", "Dark mode");
+      bi.setAttribute("aria-label", "Toggle dark mode");
     }
   }
   window.addEventListener("DOMContentLoaded", function () {
     updateDarkModeIcon();
-    const btn = document.getElementById("dark-mode-toggle");
-    if (btn) {
-      btn.addEventListener("click", function () {
+    const bi = document.getElementById("dark-mode-toggle");
+    if (bi) {
+      bi.addEventListener("click", function () {
         setDarkMode(!isDarkMode());
       });
     }
