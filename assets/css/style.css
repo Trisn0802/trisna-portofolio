@@ -4,6 +4,13 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Smooth transition when toggling dark/light mode */
+body,
+body *:not(#preloader):not(#preloader *):not(.spinner):not(.spinner *) {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
 }
 
 a {
@@ -1198,4 +1205,287 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+/*--------------------------------------------------------------
+# Dark Mode
+--------------------------------------------------------------*/
+body.dark-mode {
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+/* body.dark-mode a {
+  color: #e6edf3;
+} */
+
+body.dark-mode .github-link {
+  color: #e6edf3;
+}
+
+body.dark-mode a:hover {
+  color: #e6edf3;
+}
+
+body.dark-mode #preloader {
+  background: #0d1117;
+}
+
+body.dark-mode #preloader:before {
+  border-color: #5900ff;
+  border-top-color: #0d1117;
+  border-bottom-color: #0d1117;
+}
+
+body.dark-mode .section-bg {
+  background: #161b22;
+}
+
+body.dark-mode .section-title h2 {
+  color: #e6edf3;
+}
+
+body.dark-mode .section-title p {
+  color: #8b949e;
+}
+
+body.dark-mode .about .content h3 {
+  color: #a371f7;
+}
+
+body.dark-mode .about .content ul i {
+  color: #58a6ff;
+}
+
+body.dark-mode .facts .count-box span {
+  color: #e6edf3;
+}
+
+body.dark-mode .facts .count-box p,
+body.dark-mode .facts .count-box a {
+  color: #8b949e;
+}
+
+body.dark-mode .facts .count-box a:hover {
+  color: #58a6ff;
+}
+
+body.dark-mode .skills .progress .skill {
+  color: #e6edf3;
+}
+
+body.dark-mode .skills .progress-bar-wrap {
+  background: #21262d;
+}
+
+body.dark-mode .resume .resume-title,
+body.dark-mode .resume .resume-item h4 {
+  color: #e6edf3;
+}
+
+body.dark-mode .resume .resume-item h5 {
+  color: #8b949e;
+}
+
+body.dark-mode .resume .resume-item::before {
+  background: #161b22;
+  border-color: #58a6ff;
+}
+
+body.dark-mode .portfolio #portfolio-flters {
+  background: #21262d;
+}
+
+body.dark-mode .portfolio #portfolio-flters li {
+  color: #e6edf3;
+}
+
+body.dark-mode .portfolio #portfolio-flters li:hover,
+body.dark-mode .portfolio #portfolio-flters li.filter-active {
+  color: #58a6ff;
+}
+
+body.dark-mode .portfolio .portfolio-wrap::before {
+  background: rgba(22, 27, 34, 0.9);
+}
+
+body.dark-mode .portfolio .portfolio-wrap .portfolio-info h4,
+body.dark-mode .portfolio .portfolio-wrap .portfolio-info p,
+body.dark-mode .portfolio .portfolio-wrap .portfolio-links a {
+  color: #e6edf3;
+}
+
+body.dark-mode .portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #58a6ff;
+}
+
+body.dark-mode .portfolio-details .portfolio-info {
+  /* background: #161b22; */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .portfolio-details .portfolio-info h3 {
+  color: #e6edf3;
+  border-bottom-color: #30363d;
+}
+
+body.dark-mode .portfolio-details .portfolio-description h2 {
+  color: #e6edf3;
+}
+
+body.dark-mode .contact .info,
+body.dark-mode .contact .php-email-form {
+  background: #161b22;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .contact .info h4 {
+  color: #e6edf3;
+}
+
+body.dark-mode .contact .info p {
+  color: #8b949e;
+}
+
+body.dark-mode .contact .php-email-form input,
+body.dark-mode .contact .php-email-form textarea {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+}
+
+body.dark-mode .contact .php-email-form input::placeholder,
+body.dark-mode .contact .php-email-form textarea::placeholder {
+  color: #6e7681;
+}
+
+body.dark-mode .breadcrumbs {
+  background: #161b22;
+}
+
+body.dark-mode .breadcrumbs h2 {
+  color: #e6edf3;
+}
+
+body.dark-mode .breadcrumbs ol li + li::before {
+  color: #8b949e;
+}
+
+body.dark-mode #footer {
+  background: #010409;
+}
+
+body.dark-mode .portfolio-loader {
+  background: rgba(13, 17, 23, 0.9);
+}
+
+body.dark-mode .download-btn,
+body.dark-mode .download-btn-2 {
+  background-color: #000000;
+  color: #e6edf3;
+}
+
+body.dark-mode .download-btn:hover,
+body.dark-mode .download-btn-2:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode toggle button in sidebar */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+}
+
+.dark-mode-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffd000;
+}
+
+body.dark-mode .label-connect {
+  color: #e6edf3;
+}
+
+body.dark-mode .inner-page {
+  color: #e6edf3;
+}
+
+body.dark-mode .portfolio-link {
+  background: #21262d;
+  border-color: #30363d;
+  color: #58a6ff;
+}
+
+/* Development Team & portfolio-info section (Bootstrap cards) */
+body.dark-mode section.portfolio-info {
+  background: transparent;
+}
+
+body.dark-mode .portfolio-info .text-dark,
+body.dark-mode .text-dark {
+  color: #e6edf3 !important;
+}
+
+body.dark-mode .portfolio-info .text-muted,
+body.dark-mode .text-muted {
+  color: #8b949e !important;
+}
+
+body.dark-mode .portfolio-info .card,
+body.dark-mode .card {
+  background: #161b22;
+  border-color: #30363d;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .portfolio-info .card .card-body,
+body.dark-mode .card .card-body {
+  background: #161b22;
+  color: #e6edf3;
+}
+
+body.dark-mode .portfolio-info .card .card-title,
+body.dark-mode .card .card-title {
+  color: #e6edf3;
+}
+
+body.dark-mode .portfolio-info .card .card-text,
+body.dark-mode .card .card-text {
+  color: #8b949e;
+}
+
+body.dark-mode .portfolio-info .card .text-primary,
+body.dark-mode .card .text-primary {
+  color: #58a6ff !important;
+}
+
+body.dark-mode .portfolio-info .bg-primary.bg-opacity-10 {
+  background: rgba(88, 166, 255, 0.2) !important;
+}
+
+body.dark-mode .portfolio-info .display-4,
+body.dark-mode .portfolio-info .lead {
+  color: #e6edf3;
+}
+
+body.dark-mode .card.border-0.shadow-lg {
+  background: #161b22;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .card.border-0.shadow {
+  background: #161b22;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }

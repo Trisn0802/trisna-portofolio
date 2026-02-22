@@ -9,6 +9,50 @@
   "use strict";
 
   /**
+   * Dark mode toggle (saved in localStorage, persists across pages)
+   */
+  const STORAGE_KEY = "darkMode";
+  function isDarkMode() {
+    return document.body.classList.contains("dark-mode");
+  }
+  function setDarkMode(enabled) {
+    if (enabled) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem(STORAGE_KEY, "true");
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem(STORAGE_KEY, "false");
+    }
+    updateDarkModeIcon();
+  }
+  function updateDarkModeIcon() {
+    const btn = document.getElementById("dark-mode-toggle");
+    if (!btn) return;
+    const icon = btn.querySelector("i");
+    if (!icon) return;
+    if (isDarkMode()) {
+      icon.classList.remove("bi-moon-stars-fill");
+      icon.classList.add("bi-sun-fill");
+      btn.setAttribute("title", "Light mode");
+      btn.setAttribute("aria-label", "Switch to light mode");
+    } else {
+      icon.classList.remove("bi-sun-fill");
+      icon.classList.add("bi-moon-stars-fill");
+      btn.setAttribute("title", "Dark mode");
+      btn.setAttribute("aria-label", "Toggle dark mode");
+    }
+  }
+  window.addEventListener("DOMContentLoaded", function () {
+    updateDarkModeIcon();
+    const btn = document.getElementById("dark-mode-toggle");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        setDarkMode(!isDarkMode());
+      });
+    }
+  });
+
+  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {

@@ -50,6 +50,9 @@
   </head>
 
   <body>
+    <script>
+      (function(){var d=localStorage.getItem('darkMode');if(d==='true')document.body.classList.add('dark-mode');})();
+    </script>
     <!-- ======= Mobile nav toggle button ======= -->
     <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -102,6 +105,9 @@
             </li>
           </ul>
         </nav>
+        <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Dark mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
         <!-- .nav-menu -->
       </div>
     </header>

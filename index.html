@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -177,6 +177,9 @@
 </head>
 
 <body>
+  <script>
+    (function(){var d=localStorage.getItem('darkMode');if(d==='true')document.body.classList.add('dark-mode');})();
+  </script>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -213,6 +216,9 @@
         <a class="download-btn-2" href="assets/cv/Trisna Almuti CV.pdf" download="Trisna Almuti CV.pdf" target="_blank">Download CV</a>
       </nav><!-- .nav-menu -->
     </div>
+    <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Dark mode">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -1110,7 +1116,7 @@ This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding In
                 </div> -->
                 <div class="form-group">
                   <label class="label-connect" for="name">
-                    <i class='bx bxl-github' style="font-size: 48px; color: #242424;"></i> GitHub
+                    <i class='bx bxl-github github-link' style="font-size: 48px;"></i> GitHub
                     <a class="link-connect" href="https://github.com/Trisn0802" target="_blank">Follow</a> 
                   </label>
                 </div>
