@@ -114,12 +114,14 @@ h6 {
   left: 0;
   bottom: 0;
   width: 300px;
-  transition: all ease-in-out 0.5s;
   z-index: 9997;
-  transition: all 0.5s;
   padding: 0 15px;
   background: #5900ff;
   overflow-y: auto;
+}
+
+#header.active {
+  transform: translateX(0);
 }
 
 #header .profile img {
@@ -178,7 +180,14 @@ h6 {
 
 @media (max-width: 1199px) {
   #header {
-    left: -300px;
+    /* Off-canvas (smooth open/close) */
+    left: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    will-change: transform, opacity;
+    transition: transform 0.35s ease, opacity 0.25s ease, visibility 0s linear 0.35s;
   }
 
   #main {
@@ -261,14 +270,23 @@ h6 {
   border-radius: 50px;
   cursor: pointer;
 }
+/* .mobile-nav-toggle:hover {
+  background-color: #8342fc;
+  color: #fff;
+} */
 
 .mobile-nav-active {
   overflow: hidden;
+  transition: all 0.4s;
 }
 
 .mobile-nav-active #header {
-  left: 0;
   z-index: 9999;
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform 0.35s ease, opacity 0.25s ease, visibility 0s;
 }
 
 /* Header toggle group: dark mode + mobile nav, side by side */
