@@ -50,6 +50,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Flag Icons Local CSS -->
+  <link href="assets/flag-icons-main/css/flag-icons.min.css" rel="stylesheet">
+
   <style>
     .download-btn-2 {
       width: 100%;
@@ -184,7 +187,17 @@
   <!-- ======= Header toggles: dark mode (always) + mobile nav (mobile only) ======= -->
   <div class="header-toggle-group">
     <i class="bi bi-list mobile-nav-toggle d-xl-none" aria-label="Toggle mobile menu"></i>
-    <i id="dark-mode-toggle" class="bi bi-moon-stars-fill" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Dark mode"></i>
+    <i id="dark-mode-toggle" class="bi bi-moon-stars-fill" aria-label="Toggle dark mode" title="Dark mode"></i>
+    <div class="dropdown">
+      <button class="btn btn-dark dropdown-toggle d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="language-dropdown-button">
+        <span id="language-dropdown-flag" class="fi fi-id" aria-hidden="true"></span>
+        <span id="language-dropdown-label">ID</span>
+      </button>
+      <ul class="dropdown-menu bg-dark" aria-labelledby="language-dropdown-button">
+        <li><a class="dropdown-item d-flex align-items-center gap-2 text-bg-dark" href="#" data-lang="id"><span class="fi fi-id"></span> ID</a></li>
+        <li><a class="dropdown-item d-flex align-items-center gap-2 text-bg-dark" href="#" data-lang="en"><span class="fi fi-us"></span> EN</a></li>
+      </ul>
+    </div>
   </div>
 
   <!-- ======= Header ======= -->
@@ -207,19 +220,19 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-pencil"></i> <span>Skills</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#my-project" class="nav-link scrollto"><i class="bx bx-link-external"></i> <span>My Project</span></a></li>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span data-i18n="nav.home">Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span data-i18n="nav.about">About</span></a></li>
+          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-pencil"></i> <span data-i18n="nav.skills">Skills</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span data-i18n="nav.resume">Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span data-i18n="nav.portfolio">Portfolio</span></a></li>
+          <li><a href="#my-project" class="nav-link scrollto"><i class="bx bx-link-external"></i> <span data-i18n="nav.myProject">My Project</span></a></li>
           <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span data-i18n="nav.contact">Contact</span></a></li>
         </ul>
         <!-- <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Dark mode">
           <i class="bi bi-moon-stars-fill"></i>
         </button> -->
-        <a class="download-btn-2" href="assets/cv/Trisna Almuti CV.pdf" download="Trisna Almuti CV.pdf" target="_blank">Download CV</a>
+        <a class="download-btn-2" href="assets/cv/Trisna Almuti CV.pdf" download="Trisna Almuti CV.pdf" target="_blank" data-i18n="download.cv">Download CV</a>
       </nav><!-- .nav-menu -->
     </div>
     <!-- <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Dark mode">
@@ -230,14 +243,16 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
 
-    <div class="hero-container" data-aos="zoom-out-right">
+<div class="hero-container" data-aos="zoom-out-right">
       <h1>Trisna Almuti</h1>
       <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-        <p>I'm 
+        <p>
           <!-- <span class="typed" data-typed-items="Junior Programmer"></span> -->
+           I'm 
           <span class="typed" data-typed-items="IT Support, Junior Programmer, Web Developer"></span>
         </p>
       </div>
+    </div>
     </div>
   </section><!-- End Hero -->
 
@@ -301,10 +316,10 @@
 
         <div class="section-title">
           
-          <a class="download-btn" href="assets/cv/Trisna Almuti CV.pdf" download="Trisna Almuti CV.pdf" target="_blank">Download CV</a>
+          <a class="download-btn" href="assets/cv/Trisna Almuti CV.pdf" download="Trisna Almuti CV.pdf" target="_blank" data-i18n="about.download">Download CV</a>
           <center>
-          <h2 id="headingAbout">About</h2></center>
-          <p id="contentAbout">
+          <h2 id="headingAbout" data-i18n="about.heading">About</h2></center>
+          <p id="contentAbout" data-i18n="about.content">
             Greetings! I'm delighted to introduce myself as Trisna Almuti, a recent Software Engineering graduate with an unwavering passion for web development. My fascination with this field began in 2020, and ever since, I have embraced an insatiable thirst for knowledge. I embarked on my journey by delving into the fundamental aspects of website creation, starting with the essentials of HTML and CSS. The deeper I delved into this realm, the more my passion burgeoned, leading me to focus primarily on the captivating realm of backend development.
           </p>
         </div>
@@ -324,22 +339,22 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong id="birthday">Birthday:</strong> <span>08 Febuary 2004</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong id="birthday" data-i18n="about.birthday">Birthday:</strong> <span>08 Febuary 2004</span></li>
                   <!-- <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+62 895 7118 56677</span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>West Jakarta, Indonesia</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong id="city" data-i18n="about.city">City:</strong> <span id="cityValue" data-i18n="about.cityValue">West Jakarta, Indonesia</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> 
+                  <li><i class="bi bi-chevron-right"></i> <strong id="ageLabel" data-i18n="about.age">Age:</strong> 
                     <span id="umur">
                   </span></li>
                   <!-- <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>trisnakun20@gmail.com</span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong id="freelance" data-i18n="about.freelance">Freelance:</strong> <span id="freelance" data-i18n="about.freelance2">Available</span></li>
                 </ul>
               </div>
             </div>
-            <p>
+            <p id="contentAbout2" data-i18n="about.content2">
               I am truly fascinated by the perpetual evolution of web technologies and their boundless potential. My enthusiasm for staying abreast of the latest developments in web development is unyielding, as I aspire to make valuable contributions to the projects I engage with. 
               The realm of web technologies is in a perpetual state of growth and advancement, offering endless possibilities. I am resolute in my commitment to remain updated on the most recent developments within this dynamic field. By continuously expanding my knowledge and skill set, I aim to deliver meaningful contributions to the projects I am involved in.
             </p>
@@ -404,9 +419,9 @@
 
         <div class="section-title">
           <center>
-          <h2>Skills</h2>
-          <p>
-            As long as I learn about web development, I can master several programming languages and also use the CodeIgniter framework. Besides that, I can work individually or in a team, and I am also time-disciplined when working on projects. I always learn about web development and continue to develop myself in the field of web development.
+          <h2 data-i18n="skills.heading">Skills</h2>
+          <p data-i18n="skills.description">
+            As long as I learn about web development, I can master several programming languages and also use the Laravel framework. Besides that, I can work individually or in a team, and I am also time-disciplined when working on projects. I always learn about web development and continue to develop myself in the field of web development.
           </p>
         </center>
         </div>
@@ -415,26 +430,26 @@
 
           <div class="col-lg-6" data-aos="fade-up">
 
-            <div class="progress">
-              <span class="skill">HTML <i class="val">76%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
+<div class="progress">
+               <span class="skill">HTML <i class="val">76%</i></span>
+               <div class="progress-bar-wrap">
+                 <div class="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+             </div>
 
-            <div class="progress">
-              <span class="skill">CSS <i class="val">54%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
+             <div class="progress">
+               <span class="skill">CSS <i class="val">54%</i></span>
+               <div class="progress-bar-wrap">
+                 <div class="progress-bar" role="progressbar" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+             </div>
 
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">40%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
+             <div class="progress">
+               <span class="skill">JavaScript <i class="val">40%</i></span>
+               <div class="progress-bar-wrap">
+                 <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+             </div>
 
           </div>
 
@@ -492,7 +507,7 @@
 
           <div class="col-lg-6" data-aos="fade-up">
 
-            <center><h4>Other</h4></center>
+            <center><h4 data-i18n="skills.other">Other</h4></center>
 
             <div class="progress">
               <span class="skill">Mikrotik Router Board <i class="val">40%</i></span>
@@ -528,18 +543,18 @@
 
         <div class="section-title">
           <center>
-          <h2>Resume</h2>
-          <p>Hello, I'm happy to share about myself through this resume. In this resume, you will find information about my educational background, experience, skills mastered, and accomplishments. I have skills as a backend developer that I can apply to my job.
+          <h2 data-i18n="resume.heading">Resume</h2>
+          <p data-i18n="resume.description">Hello, I'm happy to share about myself through this resume. In this resume, you will find information about my educational background, experience, skills mastered, and accomplishments. I have skills as a backend developer that I can apply to my job.
           </p>
         </center>
         </div>
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title d-flex align-items-center gap-3"><i class="bx bx-user p-2 rounded-circle" style="background-color: #1b2838; color: white;"></i> Summary</h3>
+            <h3 class="resume-title d-flex align-items-center gap-3"><i class="bx bx-user p-2 rounded-circle" style="background-color: #1b2838; color: white;"></i> <span data-i18n="resume.summary">Summary</span></h3>
             <div class="resume-item pb-0">
-              <h4>Trisna Almuti</h4>
-              <p><em>As a recent graduate with a degree in software engineering, I bring with me a robust foundation in web development, which I have diligently cultivated over the past 3 years. This extensive period of study has equipped me with a deep understanding of the intricacies within the realm of web development, and I am unwavering in my commitment to continue learning and expanding my knowledge in this dynamic field.</em></p>
+              <h4 data-i18n="resume.name">Trisna Almuti</h4>
+              <p><em data-i18n="resume.summary1">As a recent graduate with a degree in software engineering, I bring with me a robust foundation in web development, which I have diligently cultivated over the past 3 years. This extensive period of study has equipped me with a deep understanding of the intricacies within the realm of web development, and I am unwavering in my commitment to continue learning and expanding my knowledge in this dynamic field.</em></p>
               <!-- <ul>
                 <li>Kalianyar IV Street No.29b, Tambora, Jakata Barat</li>
                 <li>(+62) 895-7118-56677</li>
@@ -547,47 +562,47 @@
               </ul> -->
             </div>
 
-            <h3 class="resume-title d-flex align-items-center gap-3"><i class="bx bx-book p-2 rounded-circle" style="background-color: #1b2838; color: white;"></i> Education</h3>
+            <h3 class="resume-title d-flex align-items-center gap-3"><i class="bx bx-book p-2 rounded-circle" style="background-color: #1b2838; color: white;"></i> <span data-i18n="resume.education">Education</span></h3>
             <div class="resume-item">
-              <h4>University Of Bina Sarana Informatika</h4>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">Informatics Engineering<h5>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">2023 - Present</h5>
-              <p><em>Universitas BSI</em></p>
-              <p>Currently, I am completing the Informatics Engineering Study Program at the University Of Bina Sarana Informatika, which has a comprehensive curriculum with a focus on software development, web programming, and artificial intelligence. This study program also emphasizes the application of the latest technology, such as big data and cloud computing.</p>
+              <h4 data-i18n="resume.edu_univ">University Of Bina Sarana Informatika</h4>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.edu_degree">Informatics Engineering</h5>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.present">2023 - Present</h5>
+              <p><em data-i18n="resume.education1">Universitas BSI</em></p>
+              <p data-i18n="resume.education2">Currently, I am completing the Informatics Engineering Study Program at the University Of Bina Sarana Informatika, which has a comprehensive curriculum with a focus on software development, web programming, and artificial intelligence. This study program also emphasizes the application of the latest technology, such as big data and cloud computing.</p>
             </div>
             
             <div class="resume-item">
-              <h4>STATE VOCATIONAL HIGH SCHOOL 1 JAKARTA</h4>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">Software Engineering Major</h5>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">2020 - 2023</h5>
-              <p><em>SMK Negeri 1 Jakarta</em></p>
-              <p>My vocational high school education provided me with a solid foundation in understanding software development and technical skills useful in my current web development career. I continue to deepen my knowledge and skills in software engineering through a growing education and work experience.</p>
+              <h4 data-i18n="resume.highschool">STATE VOCATIONAL HIGH SCHOOL 1 JAKARTA</h4>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.highschool_major">Software Engineering Major</h5>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.highschool_date">2020 - 2023</h5>
+              <p><em data-i18n="resume.highschool_location">SMK Negeri 1 Jakarta</em></p>
+              <p data-i18n="resume.highschool_desc">My vocational high school education provided me with a solid foundation in understanding software development and technical skills useful in my current web development career. I continue to deepen my knowledge and skills in software engineering through a growing education and work experience.</p>
             </div>
 
-            <h3 class="resume-title d-flex align-items-center gap-3"><i class="bx bx-trophy p-2 rounded-circle" style="background-color: #1b2838; color: white;"></i> Achievement</h3>
+            <h3 class="resume-title d-flex align-items-center gap-3"><i class="bx bx-trophy p-2 rounded-circle" style="background-color: #1b2838; color: white;"></i> <span data-i18n="resume.achievements">Achievement</span></h3>
             <div class="resume-item">
-              <h4>Bootcamp IT UBSI</h4>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">June 2025</h5>
-              <p><em>Bogor, East Bogor</em></p>
-              <p>I have completed the Web Development Bootcamp at UBSI, which provided me with a solid foundation in web development. I have learned about the basics of web development, including HTML, CSS, and JavaScript, as well as the latest web development frameworks and tools.</p>
+              <h4 data-i18n="resume.achievement1_title">Bootcamp IT UBSI</h4>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.achievement1_date">June 2025</h5>
+              <p><em data-i18n="resume.achievement1_location">Bogor, East Bogor</em></p>
+              <p data-i18n="resume.achievement1_desc">I have completed the Web Development Bootcamp at UBSI, which provided me with a solid foundation in web development. I have learned about the basics of web development, including HTML, CSS, and JavaScript, as well as the latest web development frameworks and tools.</p>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>MySQL</li>
-                <li>Laravel</li>
-                <li>Bootstrap</li>
-                <li>API (Pusher)</li>
+                <li data-i18n="resume.skill_html">HTML</li>
+                <li data-i18n="resume.skill_css">CSS</li>
+                <li data-i18n="resume.skill_js">JavaScript</li>
+                <li data-i18n="resume.skill_php">PHP</li>
+                <li data-i18n="resume.skill_mysql">MySQL</li>
+                <li data-i18n="resume.skill_laravel">Laravel</li>
+                <li data-i18n="resume.skill_bootstrap">Bootstrap</li>
+                <li data-i18n="resume.skill_api">API (Pusher)</li>
               </ul>
             </div>
 
             <div class="resume-item">
-              <h4>SOFTWARE ENGINEERING CERTIFICATION EXAM</h4>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">April 2023</h5>
-              <p><em>DKI Jakarta, Center Jakarta</em></p>
+              <h4 data-i18n="resume.achievement2_title">SOFTWARE ENGINEERING CERTIFICATION EXAM</h4>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.achievement2_date">April 2023</h5>
+              <p><em data-i18n="resume.achievement2_location">DKI Jakarta, Center Jakarta</em></p>
               <ul>
-                <li>Declared competent in carrying out the software engineering certification exam with several sections, namely basic programming and object-oriented programming using the Java programming language, then creating a website using the PHP programming language.</li>
+                <li data-i18n="resume.achievement2_desc">Declared competent in carrying out the software engineering certification exam with several sections, namely basic programming and object-oriented programming using the Java programming language, then creating a website using the PHP programming language.</li>
               </ul>
             </div>
 
@@ -595,41 +610,41 @@
 
           
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title d-flex align-items-center gap-3"><i class="bx bx-briefcase p-2 rounded-circle" style="background-color: #1b2838; color: white;"></i> Experience</h3>
+            <h3 class="resume-title d-flex align-items-center gap-3"><i class="bx bx-briefcase p-2 rounded-circle" style="background-color: #1b2838; color: white;"></i> <span data-i18n="resume.experience">Experience</span></h3>
             <div class="resume-item">
-              <h4>
+              <h4 data-i18n="resume.job1_title">
                 PT. Wisesa Consulting Indonesia
               </h4>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">Position : IT Business Analysts</h5>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">April 2023 - June 2023</h5>
-              <p><em>Ampasit VI Street No.11A, DKI Jakarta, Center Jakarta </em></p>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.job1_position">Position : IT Business Analysts</h5>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.job1_date">April 2023 - June 2023</h5>
+              <p><em data-i18n="resume.job1_location">Ampasit VI Street No.11A, DKI Jakarta, Center Jakarta </em></p>
               <ul>
-                <li>Analyze & troubleshoot system bugs/errors and Report to Development Team.</li>
-                <li>Creating system documentation such as Flowchart, Mockup, Functional Specification Document, Testing Scenarios, and User Manual/ Manual Guide.
-                <li>Meeting with users to discuss the requirements / enhancement systems.</li>
-                <li>Conduct assessment and analysis for business and user needs.</li>
-                <li>Create solutions from result of discuss requirement & asessment analysis.</li>
-                <li>Coordinate with business user and development team in software development project.</li>
-                <li>Manual Software Testing</li>
-                <li>Create documents and perform System Integration Testing (SIT) and User Acceptance Testing (UAT).</li>
-                <li>Software implementation to related users.</li>
-                <li>Use SQL queries to check data flow, data anomalies, and database structures for application error analysis report needs.</li>
+                <li data-i18n="resume.job1_duty1">Analyze & troubleshoot system bugs/errors and Report to Development Team.</li>
+                <li data-i18n="resume.job1_duty2">Creating system documentation such as Flowchart, Mockup, Functional Specification Document, Testing Scenarios, and User Manual/ Manual Guide.</li>
+                <li data-i18n="resume.job1_duty3">Meeting with users to discuss the requirements / enhancement systems.</li>
+                <li data-i18n="resume.job1_duty4">Conduct assessment and analysis for business and user needs.</li>
+                <li data-i18n="resume.job1_duty5">Create solutions from result of discuss requirement & asessment analysis.</li>
+                <li data-i18n="resume.job1_duty6">Coordinate with business user and development team in software development project.</li>
+                <li data-i18n="resume.job1_duty7">Manual Software Testing</li>
+                <li data-i18n="resume.job1_duty8">Create documents and perform System Integration Testing (SIT) and User Acceptance Testing (UAT).</li>
+                <li data-i18n="resume.job1_duty9">Software implementation to related users.</li>
+                <li data-i18n="resume.job1_duty10">Use SQL queries to check data flow, data anomalies, and database structures for application error analysis report needs.</li>
               </ul>
             </div>
             <div class="resume-item">
-              <h4>PT. Kota Cerdas Indonesia</h4>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">March 2022 - June 2022</h5>
-              <p><em>DKI Jakarta, West Jakarta</em></p>
+              <h4 data-i18n="resume.job2_title">PT. Kota Cerdas Indonesia</h4>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.job2_date">March 2022 - June 2022</h5>
+              <p><em data-i18n="resume.job2_location">DKI Jakarta, West Jakarta</em></p>
               <ul>
-                <li>As a vocational high school graduate, I had an internship at PT. Kota Cerdas Indonesia. During my internship here I did a number of things, especially looking for articles about cybersecurity, designing articles about cybersecurity, then posting the thumbnails that I made using Canva to social media after the article was made on Blogger, then operating the Spreadsheet or Excel application, Online to input employee data from other companies.</li>
+                <li data-i18n="resume.job2_duty">As a vocational high school graduate, I had an internship at PT. Kota Cerdas Indonesia. During my internship here I did a number of things, especially looking for articles about cybersecurity, designing articles about cybersecurity, then posting the thumbnails that I made using Canva to social media after the article was made on Blogger, then operating the Spreadsheet or Excel application, Online to input employee data from other companies.</li>
               </ul>
             </div>
             <div class="resume-item">
-              <h4>Kelurahan Kalianyar IV</h4>
-              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;">January 2022 - March 2022</h5>
-              <p><em>DKI Jakarta, West Jakarta</em></p>
+              <h4 data-i18n="resume.job3_title">Kelurahan Kalianyar IV</h4>
+              <h5 style="border-radius: 50px; background-color: #1b2838; color: white;" data-i18n="resume.job3_date">January 2022 - March 2022</h5>
+              <p><em data-i18n="resume.job3_location">DKI Jakarta, West Jakarta</em></p>
               <ul>
-                <li>As a vocational high school graduate, I had an internship at Kelurahan Kalianyar. During my internship here I did one thing, here I am collecting data on people who are vaccinating against Covid 19.</li>
+                <li data-i18n="resume.job3_duty">As a vocational high school graduate, I had an internship at Kelurahan Kalianyar. During my internship here I did one thing, here I am collecting data on people who are vaccinating against Covid 19.</li>
               </ul>
             </div>
           </div>
@@ -643,8 +658,8 @@
       <div class="container">
         <center>
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Here are the projects & achievements I've done so far</p>
+          <h2 data-i18n="portfolio.heading">Portfolio</h2>
+          <p data-i18n="portfolio.description">Here are the projects & achievements I've done so far</p>
         </div>
         </center>
 
@@ -655,11 +670,11 @@
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-web">Web</li>
-              <li data-filter=".filter-achievements">Achievements</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-other">Other</li>
+              <li data-filter="*" class="filter-active" data-i18n="portfolio.filters.all">All</li>
+              <li data-filter=".filter-web" data-i18n="portfolio.filters.web">Web</li>
+              <li data-filter=".filter-achievements" data-i18n="portfolio.filters.achievements">Achievements</li>
+              <li data-filter=".filter-app" data-i18n="portfolio.filters.app">App</li>
+              <li data-filter=".filter-other" data-i18n="portfolio.filters.other">Other</li>
             </ul>
           </div>
         </div>
@@ -673,10 +688,8 @@
                 <h4>SIADU</h4>
                 <p>Web Laravel & Boostrap</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/SIADU.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
-                  SIADU is a service and information-based system that provides public complaint reporting services and provides complaint status, report history, and case handling announcements.
-                  "><i class="bx bx-zoom-in"></i></a>
-                  <a href="portfolio-details-siadu.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/SIADU.png" data-gallery="portfolioGallery" class="portfolio-lightbox" data-i18n-title="portfolio_items.siadu_title_attr" title="SIADU is a service and information-based system that provides public complaint reporting services and provides complaint status, report history, and case handling announcements."><i class="bx bx-zoom-in"></i></a>
+                  <a href="portfolio-details-siadu.html" class="portfolio-details-lightbox" data-glightbox="type: external" data-i18n-title="portfolio_items.siadu_details" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -689,8 +702,8 @@
                 <h4>E - Tiket Bioskop</h4>
                 <p>Web PHP Native</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/E-TiketBioskop.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="E - Tiket Bioskop"><i class="bx bx-zoom-in"></i></a>
-                  <a href="https://nginx.trisnahome.my.id/phpnative/e-tiketbioskop/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link" target="_blank"></i></a>
+                  <a href="assets/img/portfolio/E-TiketBioskop.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" data-i18n-title="portfolio_items.etiket_title" title="E - Tiket Bioskop"><i class="bx bx-zoom-in"></i></a>
+                  <a href="https://nginx.trisnahome.my.id/phpnative/e-tiketbioskop/" class="portfolio-details-lightbox" data-glightbox="type: external" data-i18n-title="portfolio_items.siadu_details" title="Portfolio Details"><i class="bx bx-link" target="_blank"></i></a>
                 </div>
               </div>
             </div>
@@ -745,9 +758,7 @@
                 <h4>ResepKu</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/ResepKu-UI-UX-Responsive.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web ResepKu is a web project that I created to share my favorite recipes, including the delicious and easy-to-make Fried Tempeh. The web is already responsive.
-
-This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding Indonesia"><i class="bx bx-zoom-in"></i></a>
+                  <a href="assets/img/portfolio/ResepKu-UI-UX-Responsive.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web ResepKu is a web project that I created to share my favorite recipes, including the delicious and easy-to-make Fried Tempeh. The web is already responsive. This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding Indonesia"><i class="bx bx-zoom-in"></i></a>
                   <a href="https://resepku.pages.dev/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details" target="_blank"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -918,10 +929,10 @@ This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding In
       <div class="container">
         <div class="section-title">
           <center>
-            <h2>My Project</h2>
+            <h2 data-i18n="myProject.heading">My Project</h2>
             <div data-aos="fade-up">
-              <p>Visit my complete project collection on the link below.</p>
-              <a href="https://project.trisnahome.my.id" class="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer" style="background-color: #5900ff; border-color: #5900ff;"><i class="bx bx-link-external"></i> Open My Project</a>
+              <p data-i18n="myProject.description">Visit my complete project collection on the link below.</p>
+              <a href="https://project.trisnahome.my.id" class="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer" style="background-color: #5900ff; border-color: #5900ff;"><i class="bx bx-link-external"></i> <span data-i18n="myProject.button">Open My Project</span></a>
             </div>
           </center>
         </div>
@@ -1070,7 +1081,7 @@ This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding In
 
         <div class="section-title">
           <center>
-          <h2>Contact</h2>
+          <h2 data-i18n="contact.heading">Contact</h2>
           <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </center>
         </div>
@@ -1081,19 +1092,19 @@ This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding In
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Kalianyar IV Street No.29b, DKI Jakarta, Kec. Tambora, West Jakarta, 11310</p>
+                <h4 data-i18n="contact.location">Location:</h4>
+                <p data-i18n="contact.locationValue">Kalianyar IV Street No.29b, DKI Jakarta, Kec. Tambora, West Jakarta, 11310</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
+                <h4 data-i18n="contact.email">Email:</h4>
                 <p>trisnawisesa20@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
+                <h4 data-i18n="contact.call">Call:</h4>
                 <p>+62 895 7118 56677</p>
               </div>
 
@@ -1108,7 +1119,7 @@ This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding In
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <p style="text-align: center; padding: 6px; background-color: #5900ff; color: white; border-radius: 10px;">More Connection With Me <span style="font-size: 24px;">🤝</span></p>
+              <p style="text-align: center; padding: 6px; background-color: #5900ff; color: white; border-radius: 10px;"><span data-i18n="contact.moreConnection">More Connection With Me</span> <span style="font-size: 24px;">🤝</span></p>
               <div class="row">
                 <!-- <div class="form-group">
                   <label class="label-connect" for="name">
@@ -1119,7 +1130,7 @@ This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding In
                 <div class="form-group">
                   <label class="label-connect" for="name">
                     <i class='bx bxl-whatsapp' style="font-size: 48px; color: #2ac54d;"></i> WhatsApp
-                    <a class="link-connect" href="https://wa.me/62895711856677" target="_blank">Follow</a> 
+                    <a class="link-connect" href="https://wa.me/62895711856677" target="_blank" data-i18n="contact.follow">Follow</a> 
                   </label>
                 </div>
                 <!-- <div class="form-group">
@@ -1137,7 +1148,7 @@ This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding In
                 <div class="form-group">
                   <label class="label-connect" for="name">
                     <i class='bx bxl-github github-link' style="font-size: 48px;"></i> GitHub
-                    <a class="link-connect" href="https://github.com/Trisn0802" target="_blank">Follow</a> 
+                    <a class="link-connect" href="https://github.com/Trisn0802" target="_blank" data-i18n="contact.follow">Follow</a> 
                   </label>
                 </div>
                 <!-- <div class="form-group">
@@ -1158,19 +1169,19 @@ This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding In
                 <div class="form-group">
                   <label class="label-connect" for="name">
                     <i class='bx bxl-instagram' style="font-size: 48px; background-image: linear-gradient(135deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); -webkit-background-clip: text; color: transparent;"></i> Instagram
-                    <a class="link-connect" href="https://www.instagram.com/trisna_bijix_789" target="_blank">Follow</a> 
+                    <a class="link-connect" href="https://www.instagram.com/trisna_bijix_789" target="_blank" data-i18n="contact.follow">Follow</a> 
                   </label>
-                </div>                
+                </div>
                 <div class="form-group">
                   <label class="label-connect" for="name">
                     <i class='bx bxl-linkedin-square' style="font-size: 48px; color: #0077B5;"></i> LinkedIn
-                    <a class="link-connect" href="https://www.linkedin.com/in/trisna-almuti-245b742a4" target="_blank">Follow</a> 
+                    <a class="link-connect" href="https://www.linkedin.com/in/trisna-almuti-245b742a4" target="_blank" data-i18n="contact.follow">Follow</a> 
                   </label>
                 </div>
                 <div class="form-group">
                   <label class="label-connect" for="name">
                     <i class='bx bxl-blogger' style="font-size: 48px; color: #fe6602;"></i> Blogger
-                    <a class="link-connect" href="https://smkn1palingganteng.blogspot.com" target="_blank">Follow</a> 
+                    <a class="link-connect" href="https://smkn1palingganteng.blogspot.com" target="_blank" data-i18n="contact.follow">Follow</a> 
                   </label>
                 </div>
             </form>
@@ -1217,9 +1228,9 @@ This is the final assignment of (Belajar Pemrograman Dasar Web) from Dicoding In
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        Thank you for visiting my portofolio <strong>
+        <span id="footerInfo" data-i18n="footerInfo.info1">Thank you for visiting my portfolio</span> <strong>
           <!-- <br> -->
-          <span>Best Regards</span></strong> ❤️
+          <span id="footerInfo" data-i18n="footerInfo.info2">Best Regards</span></strong> ❤️
       </div>
       <div class="credits">
       </div>

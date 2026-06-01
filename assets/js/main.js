@@ -44,6 +44,9 @@
     }
   }
   window.addEventListener("DOMContentLoaded", function () {
+    const storedDarkMode = localStorage.getItem(STORAGE_KEY);
+    setDarkMode(storedDarkMode === "true");
+
     updateDarkModeIcon();
     const bi = document.getElementById("dark-mode-toggle");
     if (bi) {

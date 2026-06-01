@@ -1,32 +1,93 @@
-// Language data
-const languageData = {
-  id: {
-    birthday: "Umur",
-    contentAbout:
-      "Perkenalkan! nama saya Trisna Almuti, lulusan Rekayasa Perangkat Lunak yang baru saja lulus dengan semangat yang tak tergoyahkan dalam pengembangan web. Ketertarikan saya pada bidang ini dimulai pada tahun 2020, dan sejak saat itu, saya memiliki rasa haus yang tak terpuaskan akan pengetahuan. Saya memulai perjalanan saya dengan mempelajari aspek dasar pembuatan situs web, dimulai dengan dasar-dasar HTML dan CSS. Semakin dalam saya mendalami bidang ini, semakin besar pula minat saya, yang mengarahkan saya untuk berfokus terutama pada bidang pengembangan backend.",
-  },
-  en: {
-    birthday: "Birthday",
-    contentAbout:
-      "Greetings! I'm delighted to introduce myself as Trisna Almuti, a recent Software Engineering graduate with an unwavering passion for web development. My fascination with this field began in 2020, and ever since, I have embraced an insatiable thirst for knowledge. I embarked on my journey by delving into the fundamental aspects of website creation, starting with the essentials of HTML and CSS. The deeper I delved into this realm, the more my passion burgeoned, leading me to focus primarily on the captivating realm of backend development.",
-  },
+const LANGUAGE_STORAGE_KEY = "siteLanguage";
+const LANGUAGE_FILES = {
+  id: "assets/i18n/indonesia.json",
+  en: "assets/i18n/english.json",
+};
+const LANGUAGE_LABELS = {
+  id: "ID",
+  en: "EN",
 };
 
-// Function to change language
-function changeLanguage(lang) {
-  const birthday = document.getElementById("birthday");
-  const contentAbout = document.getElementById("contentAbout");
-
-  birthday.textContent = languageData[lang].birthday;
-  contentAbout.textContent = languageData[lang].contentAbout;
+function getSavedLanguage() {
+  const lang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  return lang === "en" ? "en" : "id";
 }
 
-// Event listener for language links
-const languageLinks = document.querySelectorAll("[data-lang]");
-languageLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const selectedLang = e.target.getAttribute("data-lang");
-    changeLanguage(selectedLang);
+function updateLanguageDropdownLabel(lang) {
+  const label = document.getElementById("language-dropdown-label");
+  const flag = document.getElementById("language-dropdown-flag");
+  const flagCode = lang === "en" ? "us" : lang;
+
+  if (flag) {
+    flag.className = `fi fi-${flagCode}`;
+  }
+
+  if (label) {
+    label.textContent = LANGUAGE_LABELS[lang] || lang.toUpperCase();
+  }
+}
+
+function resolveTranslation(translations, key) {
+  return key.split(".").reduce((obj, part) => {
+    return obj && obj[part] !== undefined ? obj[part] : null;
+  }, translations);
+}
+
+function applyTranslations(translations, lang) {
+  document.documentElement.lang = lang === "en" ? "en" : "id";
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    const translation = resolveTranslation(translations, key);
+    if (translation !== null) {
+      element.textContent = translation;
+    }
   });
-});
+
+  document.querySelectorAll("[data-i18n-title]").forEach((element) => {
+    const key = element.dataset.i18nTitle;
+    const translation = resolveTranslation(translations, key);
+    if (translation !== null) {
+      element.setAttribute("title", translation);
+    }
+  });
+}
+
+async function loadLanguage(lang) {
+  try {
+    const file = LANGUAGE_FILES[lang] || LANGUAGE_FILES.id;
+    const response = await fetch(file);
+    if (!response.ok) {
+      throw new Error(`Unable to load language file: ${file}`);
+    }
+    const translations = await response.json();
+    applyTranslations(translations, lang);
+    updateLanguageDropdownLabel(lang);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function setLanguage(lang) {
+  localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+  updateLanguageDropdownLabel(lang);
+  loadLanguage(lang);
+}
+
+function initLanguage() {
+  const lang = getSavedLanguage();
+  updateLanguageDropdownLabel(lang);
+  loadLanguage(lang);
+
+  document.querySelectorAll("[data-lang]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const selectedLang = event.currentTarget.getAttribute("data-lang");
+      if (selectedLang) {
+        setLanguage(selectedLang);
+      }
+    });
+  });
+}
+
+window.addEventListener("DOMContentLoaded", initLanguage);
