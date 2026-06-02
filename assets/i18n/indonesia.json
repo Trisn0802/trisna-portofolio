@@ -11,7 +11,7 @@
   "about": {
     "heading": "Tentang",
     "download": "Download CV",
-    "content": "Perkenalkan! Saya Trisna Almuti, lulusan Software Engineering yang baru lulus dengan semangat tak tergoyahkan dalam pengembangan web. Perjalanan saya dimulai pada tahun 2020, dan sejak saat itu saya terus belajar tentang HTML, CSS, dan pengembangan backend hingga kini.",
+    "content": "Perkenalkan! Saya Trisna Almuti, lulusan Rekayasa Perangkat Lunak (RPL) yang baru lulus dengan semangat tak tergoyahkan dalam pengembangan web. Perjalanan saya dimulai pada tahun 2020, dan sejak saat itu saya terus belajar tentang HTML, CSS, dan pengembangan backend hingga kini.",
     "birthday": "Tanggal Lahir:",
     "city": "Kota:",
     "cityValue": "Jakarta Barat, Indonesia",
@@ -83,7 +83,7 @@
     "achievement1_date": "Juni 2025",
     "achievement1_location": "Asyana Hotel, Sentul - Jawa Barat",
     "achievement1_desc": "Saya telah menyelesaikan Web Development Bootcamp di UBSI, yang memberikan dasar yang kuat dalam pengembangan web. Saya belajar tentang dasar-dasar pengembangan web, termasuk HTML, CSS, dan JavaScript, serta framework pengembangan web terbaru.",
-    "achievement2_title": "SOFTWARE ENGINEERING CERTIFICATION EXAM",
+    "achievement2_title": "UJIAN SERTIFIKASI REKAYASA PERANGKAT LUNAK (LSP)",
     "achievement2_date": "April 2023",
     "achievement2_location": "DKI Jakarta, Center Jakarta",
     "achievement2_desc": "Dinyatakan kompeten dalam menyelesaikan ujian kompetensi rekayasa perangkat lunak dengan beberapa bagian, yaitu pemrograman dasar dan pemrograman berorientasi objek menggunakan bahasa pemrograman Java, lalu membuat website menggunakan bahasa pemrograman PHP.",
