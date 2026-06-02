@@ -151,6 +151,9 @@
     "attachment5": "Lampiran 5",
     "activityPhotos": "Foto kegiatan",
     "itBootcampProject": "Proyek IT Bootcamp",
-    "bootcampDesc": "SIADU dikembangkan sebagai bukti laporan hasil kegiatan IT Bootcamp untuk Semester Genap Tahun Akademik 2025/2026 di Fakultas Teknik dan Informatika, Universitas Bina Sarana Informatika Jakarta."
+    "bootcampDesc": "SIADU dikembangkan sebagai bukti laporan hasil kegiatan IT Bootcamp untuk Semester Genap Tahun Akademik 2025/2026 di Fakultas Teknik dan Informatika, Universitas Bina Sarana Informatika Jakarta.",
+    "developmentYear": "Tahun Pengembangan",
+    "teamMembers": "Anggota Tim",
+    "university": "Universitas"
   }
 }

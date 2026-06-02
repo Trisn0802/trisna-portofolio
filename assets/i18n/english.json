@@ -151,6 +151,9 @@
     "attachment5": "Attachment 5",
     "activityPhotos": "Activity photos",
     "itBootcampProject": "IT Bootcamp Project",
-    "bootcampDesc": "SIADU was developed as evidence of the report on the results of the IT Bootcamp activities for Even Semester of the 2025/2026 Academic Year at the Faculty of Engineering and Informatics, Bina Sarana Informatika University, Jakarta."
+    "bootcampDesc": "SIADU was developed as evidence of the report on the results of the IT Bootcamp activities for Even Semester of the 2025/2026 Academic Year at the Faculty of Engineering and Informatics, Bina Sarana Informatika University, Jakarta.",
+    "developmentYear": "Development Year",
+    "teamMembers": "Team Members",
+    "university": "University"
   }
 }
