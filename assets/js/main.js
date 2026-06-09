@@ -142,11 +142,23 @@
   /**
    * Mobile nav toggle
    */
-  on("click", ".mobile-nav-toggle", function (e) {
-    select("body").classList.toggle("mobile-nav-active");
-    this.classList.toggle("bi-list");
-    this.classList.toggle("bi-x");
-  });
+  const syncMobileNavToggles = () => {
+    const isOpen = select("body").classList.contains("mobile-nav-active");
+    select(".mobile-nav-toggle", true).forEach((toggle) => {
+      toggle.classList.toggle("bi-list", !isOpen);
+      toggle.classList.toggle("bi-x", isOpen);
+    });
+  };
+
+  on(
+    "click",
+    ".mobile-nav-toggle",
+    function (e) {
+      select("body").classList.toggle("mobile-nav-active");
+      syncMobileNavToggles();
+    },
+    true
+  );
 
   /**
    * Scrool with ofset on links with a class name .scrollto
@@ -161,9 +173,7 @@
         let body = select("body");
         if (body.classList.contains("mobile-nav-active")) {
           body.classList.remove("mobile-nav-active");
-          let navbarToggle = select(".mobile-nav-toggle");
-          navbarToggle.classList.toggle("bi-list");
-          navbarToggle.classList.toggle("bi-x");
+          syncMobileNavToggles();
         }
         scrollto(this.hash);
       }

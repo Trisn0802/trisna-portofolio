@@ -236,12 +236,12 @@
     </style>
   </head>
 
-  <body>
+  <body class="has-breadcrumbs">
     <script>
       (function(){var d=localStorage.getItem('darkMode');if(d==='true')document.body.classList.add('dark-mode');})();
     </script>
     <!-- ======= Header toggles: dark mode (always) + mobile nav (mobile only) ======= -->
-    <div class="header-toggle-group">
+    <div class="header-toggle-group header-toggle-group--outside">
       <i class="bi bi-list mobile-nav-toggle d-xl-none" aria-label="Toggle mobile menu"></i>
       <i id="dark-mode-toggle" class="bi bi-moon-stars-fill" aria-label="Toggle dark mode" title="Dark mode"></i>
       <div class="dropdown">
@@ -258,6 +258,9 @@
 
     <!-- ======= Header ======= -->
     <header id="header">
+      <div class="header-toggle-group header-toggle-group--inside">
+        <i class="bi bi-list mobile-nav-toggle d-xl-none" aria-label="Toggle mobile menu"></i>
+      </div>
       <div class="d-flex flex-column">
         <div class="profile">
           <img
@@ -274,11 +277,12 @@
         <nav id="navbar" class="nav-menu navbar">
           <ul>
             <li>
-              <a href="index.html" class="nav-link scrollto active"
-                ><i class="bx bx-home"></i> <span data-i18n="nav.home">Home</span></a
-              >
+              <a href="index.html" class="nav-link scrollto active">
+                <i class="bx bx-home"></i> <span data-i18n="nav.home">Home</span>
+              </a>
             </li>
           </ul>
+          <a class="download-btn-2" href="assets/cv/trisna-almuti-cv.zip" download="trisna-almuti-cv.zip" target="_blank" data-i18n="download.cv">Download CV</a>
         </nav>
         <!-- <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Dark mode">
           <i class="bi bi-moon-stars-fill"></i>
