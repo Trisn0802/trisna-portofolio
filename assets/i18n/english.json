@@ -110,6 +110,27 @@
       "other": "Other"
     }
   },
+  "portfolio_items": {
+    "details": "Portfolio Details",
+    "siadu_description": "SIADU is a service and information-based system that provides public complaint reporting services and provides complaint status, report history, and case handling announcements.",
+    "etiket_title": "E - Tiket Bioskop",
+    "ekantin_title": "E - Kantin",
+    "ecommerce_title": "E - Commerce",
+    "laundry_title": "MyLaundry",
+    "resepku_description": "Web ResepKu is a responsive project for sharing favorite recipes, including easy-to-make fried tempeh. It was created as the final assignment for Dicoding Indonesia's Web Programming Basics course.",
+    "todo_description": "Todo List web application",
+    "frontend_certificate": "Learn Web Programming Basics for Front-End: JavaScript, DOM, BOM, JSON, and Local Storage",
+    "basic_web_certificate": "Learn Web Programming Basics: HTML, CSS, and JavaScript",
+    "kotlin_certificate": "Get Started with Programming in Kotlin",
+    "pcap_certificate": "PCAP: Programming Essentials in Python",
+    "bootcamp_certificate": "SIADU Bootcamp Project Certificate",
+    "bootcamp_award": "3rd Place Bootcamp Project",
+    "rembg_description": "A free, ad-free, open-source app for uploading images, automatically removing backgrounds, and saving results to a gallery. Images can also be uploaded and downloaded without logging in, with no file-size limits.",
+    "ezcoder_description": "EZCoder is a web-based AI coding assistant for web development projects.",
+    "downstream_description": "A self-hosted web app for downloading video, audio, or thumbnails from YouTube and 1,000+ other sites, powered by yt-dlp and ffmpeg. Users can choose resolution and audio format (MP3, M4A, or original), track active downloads, and manage a searchable download history. It includes user accounts with an admin panel, light/dark/AMOLED themes, an in-app media player, and in-app yt-dlp updates. It runs in a Docker container on my own server, with a responsive, ad-free interface.",
+    "webhook_description": "A lightweight, login-protected webhook manager that sends messages to my personal Telegram bot. It lets me receive notifications from my own services and automations in one place, and it is built for personal use.",
+    "attendance_title": "Student Attendance UI/UX"
+  },
   "myProject": {
     "heading": "My Project",
     "description": "Visit my complete project collection on the link below.",

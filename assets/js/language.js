@@ -62,6 +62,7 @@ async function loadLanguage(lang) {
     }
     const translations = await response.json();
     applyTranslations(translations, lang);
+    window.dispatchEvent(new CustomEvent("siteLanguageChanged", { detail: { lang } }));
     updateLanguageDropdownLabel(lang);
   } catch (error) {
     console.error(error);

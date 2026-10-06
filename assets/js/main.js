@@ -277,6 +277,12 @@
 
   let portfolioLightbox = null;
 
+  window.addEventListener("siteLanguageChanged", () => {
+    if (portfolioLightbox) {
+      initPortfolioLightbox();
+    }
+  });
+
   function initPortfolioLightbox() {
     if (portfolioLightbox) {
       portfolioLightbox.destroy();

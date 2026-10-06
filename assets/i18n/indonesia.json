@@ -110,6 +110,27 @@
       "other": "Lainnya"
     }
   },
+  "portfolio_items": {
+    "details": "Detail Portofolio",
+    "siadu_description": "SIADU adalah sistem layanan dan informasi yang menyediakan layanan pelaporan pengaduan masyarakat, status pengaduan, riwayat laporan, dan pengumuman penanganan kasus.",
+    "etiket_title": "E - Tiket Bioskop",
+    "ekantin_title": "E - Kantin",
+    "ecommerce_title": "E - Commerce",
+    "laundry_title": "MyLaundry",
+    "resepku_description": "ResepKu adalah proyek web responsif untuk berbagi resep favorit, termasuk tempe goreng yang mudah dibuat. Proyek ini dibuat sebagai tugas akhir kelas Belajar Pemrograman Dasar Web dari Dicoding Indonesia.",
+    "todo_description": "Aplikasi web daftar tugas",
+    "frontend_certificate": "Belajar Dasar Pemrograman Web untuk Front-End: JavaScript, DOM, BOM, JSON, dan Local Storage",
+    "basic_web_certificate": "Belajar Dasar Pemrograman Web: HTML, CSS, dan JavaScript",
+    "kotlin_certificate": "Memulai Pemrograman dengan Kotlin",
+    "pcap_certificate": "PCAP: Dasar-Dasar Pemrograman dengan Python",
+    "bootcamp_certificate": "Sertifikat Proyek Bootcamp SIADU",
+    "bootcamp_award": "Proyek Bootcamp Juara 3",
+    "rembg_description": "Aplikasi gratis, tanpa iklan, dan sumber terbuka untuk mengunggah gambar, menghapus latar belakang secara otomatis, dan menyimpan hasilnya ke galeri. Gambar juga dapat diunggah dan diunduh tanpa login serta tanpa batas ukuran file.",
+    "ezcoder_description": "EZCoder adalah asisten AI pemrograman berbasis web untuk membantu proyek pengembangan web.",
+    "downstream_description": "Aplikasi web yang di-host sendiri untuk mengunduh video, audio, atau thumbnail dari YouTube dan lebih dari 1.000 situs lain menggunakan yt-dlp dan ffmpeg. Pengguna dapat memilih resolusi dan format audio (MP3, M4A, atau asli), memantau unduhan aktif, serta mengelola riwayat unduhan yang dapat dicari. Aplikasi ini memiliki akun pengguna dan panel admin, tema terang/gelap/AMOLED, pemutar media, serta pembaruan yt-dlp di dalam aplikasi. Aplikasi berjalan dalam kontainer Docker di server pribadi dengan antarmuka responsif tanpa iklan.",
+    "webhook_description": "Pengelola webhook ringan yang dilindungi login dan mengirim pesan ke bot Telegram pribadi saya. Aplikasi ini mengumpulkan notifikasi dari layanan dan otomatisasi pribadi di satu tempat.",
+    "attendance_title": "UI/UX Absensi Siswa"
+  },
   "myProject": {
     "heading": "Proyek Saya",
     "description": "Kunjungi koleksi proyek lengkap saya pada tautan di bawah ini.",
