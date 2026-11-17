@@ -470,18 +470,28 @@
                 </section>
                 <!-- End Features Section -->
 
-                <!-- ======= Screenshots Section ======= -->
+                <!-- ======= Documentation Section ======= -->
                 <section class="portfolio pt-5">
                   <div class="container">
                     <center>
                       <div class="section-title">
-                        <h2 data-i18n="ruangaset.screenshots">Screenshots</h2>
-                        <p data-i18n="ruangaset.screenshotsDesc">Beberapa halaman utama RuangAset dengan data contoh.</p>
+                        <h2 data-i18n="ruangaset.documentation">Dokumentasi</h2>
+                        <p data-i18n="ruangaset.documentationDesc">Screenshot aplikasi dan foto kegiatan PKL.</p>
                       </div>
                     </center>
 
+                    <div class="row" data-aos="fade-up">
+                      <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                          <li data-filter="*" class="filter-active" data-i18n="ruangaset.filterAll">Semua</li>
+                          <li data-filter=".filter-screenshot" data-i18n="ruangaset.filterScreenshot">Screenshot</li>
+                          <li data-filter=".filter-photo" data-i18n="ruangaset.filterPhoto">Foto</li>
+                        </ul>
+                      </div>
+                    </div>
+
                     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-                      <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-screenshot">
                         <div class="portfolio-wrap">
                           <img src="assets/img/portfolio/portofolio-details/RuangAset-2.png" class="img-fluid" alt="Halaman barang RuangAset" />
                           <div class="portfolio-info">
@@ -494,7 +504,7 @@
                         </div>
                       </div>
 
-                      <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-screenshot">
                         <div class="portfolio-wrap">
                           <img src="assets/img/portfolio/portofolio-details/RuangAset-3.png" class="img-fluid" alt="Kartu Inventaris Ruangan" />
                           <div class="portfolio-info">
@@ -507,7 +517,7 @@
                         </div>
                       </div>
 
-                      <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-screenshot">
                         <div class="portfolio-wrap">
                           <img src="assets/img/portfolio/portofolio-details/RuangAset-4.png" class="img-fluid" alt="Halaman perpindahan" />
                           <div class="portfolio-info">
@@ -520,7 +530,7 @@
                         </div>
                       </div>
 
-                      <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-screenshot">
                         <div class="portfolio-wrap">
                           <img src="assets/img/portfolio/portofolio-details/RuangAset-5.png" class="img-fluid" alt="Halaman laporan" />
                           <div class="portfolio-info">
@@ -533,7 +543,7 @@
                         </div>
                       </div>
 
-                      <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="col-lg-4 col-md-6 portfolio-item filter-screenshot">
                         <div class="portfolio-wrap">
                           <img src="assets/img/portfolio/portofolio-details/RuangAset-6.png" class="img-fluid" alt="Halaman pengaturan" />
                           <div class="portfolio-info">
@@ -545,10 +555,46 @@
                           </div>
                         </div>
                       </div>
+
+                      <!--
+                        Template foto kegiatan. Duplikat blok ini, ganti src dan teksnya,
+                        lalu simpan file di assets/img/portfolio/portofolio-details/.
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-photo">
+                          <div class="portfolio-wrap">
+                            <img src="assets/img/portfolio/portofolio-details/RuangAset-foto-1.jpg" class="img-fluid" alt="Foto kegiatan PKL" />
+                            <div class="portfolio-info">
+                              <h4>Foto kegiatan</h4>
+                              <p>Ganti judul dan deskripsi sesuai foto.</p>
+                              <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portofolio-details/RuangAset-foto-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      -->
                     </div>
+
+                    <p id="photo-empty" class="text-center text-muted py-5 mb-0 d-none" data-i18n="ruangaset.photoEmpty">
+                      Foto kegiatan PKL menyusul.
+                    </p>
+
+                    <script>
+                      (function () {
+                        var empty = document.getElementById("photo-empty");
+                        var photoItems = document.querySelectorAll(".portfolio-container .portfolio-item.filter-photo");
+                        if (!empty) return;
+                        document.querySelectorAll("#portfolio-flters li").forEach(function (filter) {
+                          filter.addEventListener("click", function () {
+                            var show = filter.getAttribute("data-filter") === ".filter-photo" && photoItems.length === 0;
+                            empty.classList.toggle("d-none", !show);
+                          });
+                        });
+                      })();
+                    </script>
                   </div>
                 </section>
-                <!-- End Screenshots Section -->
+                <!-- End Documentation Section -->
 
                 <div class="row mt-5">
                   <div class="col-12">
