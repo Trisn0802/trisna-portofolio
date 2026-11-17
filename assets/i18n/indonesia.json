@@ -129,6 +129,8 @@
     "ezcoder_description": "EZCoder adalah asisten AI pemrograman berbasis web untuk membantu proyek pengembangan web.",
     "downstream_description": "Aplikasi web yang di-host sendiri untuk mengunduh video, audio, atau thumbnail dari YouTube dan lebih dari 1.000 situs lain menggunakan yt-dlp dan ffmpeg. Pengguna dapat memilih resolusi dan format audio (MP3, M4A, atau asli), memantau unduhan aktif, serta mengelola riwayat unduhan yang dapat dicari. Aplikasi ini memiliki akun pengguna dan panel admin, tema terang/gelap/AMOLED, pemutar media, serta pembaruan yt-dlp di dalam aplikasi. Aplikasi berjalan dalam kontainer Docker di server pribadi dengan antarmuka responsif tanpa iklan.",
     "webhook_description": "Pengelola webhook ringan yang dilindungi login dan mengirim pesan ke bot Telegram pribadi saya. Aplikasi ini mengumpulkan notifikasi dari layanan dan otomatisasi pribadi di satu tempat.",
+    "modwatch_kind": "Pelacak modpack Minecraft",
+    "modwatch_description": "Pelacak pembaruan modpack Minecraft yang di-host sendiri. ModWatch menyimpan versi Minecraft, loader, dan versi pack tiap instance, lalu hanya melaporkan rilis baru yang cocok. Fiturnya mencakup import/export .mrpack, notifikasi, approval member, halaman share publik, serta server sync ke panel AMP dan Pterodactyl dengan backup dan rollback otomatis.",
     "attendance_title": "UI/UX Absensi Siswa"
   },
   "myProject": {

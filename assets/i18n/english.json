@@ -129,6 +129,8 @@
     "ezcoder_description": "EZCoder is a web-based AI coding assistant for web development projects.",
     "downstream_description": "A self-hosted web app for downloading video, audio, or thumbnails from YouTube and 1,000+ other sites, powered by yt-dlp and ffmpeg. Users can choose resolution and audio format (MP3, M4A, or original), track active downloads, and manage a searchable download history. It includes user accounts with an admin panel, light/dark/AMOLED themes, an in-app media player, and in-app yt-dlp updates. It runs in a Docker container on my own server, with a responsive, ad-free interface.",
     "webhook_description": "A lightweight, login-protected webhook manager that sends messages to my personal Telegram bot. It lets me receive notifications from my own services and automations in one place, and it is built for personal use.",
+    "modwatch_kind": "Minecraft modpack tracker",
+    "modwatch_description": "A self-hosted update tracker for Minecraft modpacks. It stores each instance's Minecraft version, loader, and pack version, then reports only new releases that match. Features include .mrpack import/export, notifications, member approvals, public share pages, and server sync to AMP and Pterodactyl panels with backups and automatic rollback.",
     "attendance_title": "Student Attendance UI/UX"
   },
   "myProject": {
